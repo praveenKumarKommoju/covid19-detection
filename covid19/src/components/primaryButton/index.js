@@ -1,9 +1,10 @@
 import * as React from 'react';    
 import Button from '@mui/material/Button';  
 
-const PrimaryButton=()=> {  
+const PrimaryButton=(props)=> {  
+  const {title, onClick}=props;
   return (  
-      <Button variant="contained">Contained</Button>   
+      <Button variant="contained" onClick={onClick}>{title||'title'}</Button>   
   );  
 }  
 
